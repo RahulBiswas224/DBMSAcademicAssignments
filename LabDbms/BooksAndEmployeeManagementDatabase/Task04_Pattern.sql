@@ -1,0 +1,7 @@
+SET SERVEROUTPUT ON;
+BEGIN
+    FOR i IN 1..4 LOOP
+        DBMS_OUTPUT.PUT_LINE(RPAD('*', i, '*'));
+    END LOOP;
+END;
+/

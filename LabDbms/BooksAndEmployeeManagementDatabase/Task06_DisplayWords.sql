@@ -1,0 +1,9 @@
+SET SERVEROUTPUT ON;
+DECLARE
+    s VARCHAR2(100) := '&input_string';
+BEGIN
+    FOR i IN 1..REGEXP_COUNT(s, '\w+') LOOP
+        DBMS_OUTPUT.PUT_LINE(REGEXP_SUBSTR(s, '\w+', 1, i));
+    END LOOP;
+END;
+/
